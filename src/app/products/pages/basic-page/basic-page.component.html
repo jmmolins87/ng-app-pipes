@@ -1,0 +1,22 @@
+<p-panel [showHeader]="false">
+    <h2>{{ title }}</h2>
+    <p>{{ mainText }}</p>
+</p-panel>
+
+<div class="grid mt-2">
+    <div class="col-4">
+        <p-card header="uppercase">
+            {{ nameLower }}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="uppercase">
+            {{ nameUpper }}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="uppercase">
+            {{ fullName }}
+        </p-card>
+    </div>
+</div>

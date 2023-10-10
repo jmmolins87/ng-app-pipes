@@ -10,8 +10,8 @@ export class BasicPageComponent {
 
   public title: string = 'Pipes Básicos';
   public mainText: string = 'Pipes incluidas en Angular - Usualmente en el Common Module';
-  public nameLower: string = 'juanma';
-  public nameUpper: string = 'MOLINS';
+  public nameLower: string = 'JUANMA';
+  public nameUpper: string = 'molins';
   public fullName: string = 'jUAnmA moLiNs'
 
 }

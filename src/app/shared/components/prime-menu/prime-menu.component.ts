@@ -43,7 +43,8 @@ export class PrimeMenuComponent {
         items: [
           {
             label: 'Otras opciones',
-            icon: 'pi pi-cog'
+            icon: 'pi pi-cog',
+            routerLink: '/custom'
           }
         ]
       }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval, tap } from 'rxjs';
 
 
 @Component({
@@ -22,11 +23,23 @@ export class UncommonPageComponent {
   }
 
   // i18nPlural
-  public clients: string[] = ['Fernando', 'Juanma,', 'Luís,', 'Melissa,', 'Natalia' ];
+  public clients: string[] = ['Fernando', 'Juanma', 'Luís', 'Melissa', 'Natalia' ];
   clientsMap = { '=0': 'no tenemos ningún cliente esperando.', '=1': 'tenemos 1 cliente esperando.', 'other': 'tenemos # clientes esperando.' }
 
   deleteClient(): void {
     this.clients.pop();
   }
+
+  // keyValue Pipe
+  public person = {
+    name: 'Juanma',
+    age: 36,
+    direction: 'Segovia, Spain'
+  }
+
+  // Async Pipe
+  public myObservableTimer = interval(1000).pipe(
+    tap( value => console.log( 'tap:', value ))
+  );
 
 }

@@ -1,1 +1,29 @@
-<p>number-page works!</p>
+<p-panel [header]="title" class="p-1">
+    <h2>{{ mainText }}</h2>
+</p-panel>
+
+<div class="grid">
+    <div class="col-12 md:col-4">
+        <p-card header="Ventas netas del presente año" subheader="Quiero solo dos decimales">
+            {{ totalSells | number: '1.2-2' }}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <p-card header="Ventas netas del presente año" subheader="Quiero el precio en $">
+            {{ totalSells | currency }}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <p-card header="Ventas netas del presente año" subheader="Quiero el precio en € y con cuatro decimales">
+            {{ totalSells | currency: 'EUR' : 'symbol-narrow': '1.4-4' }}
+        </p-card>
+    </div>
+
+    <div class="col-12">
+        <p-card header="Ventas netas del presente año" subheader="Quiero el % con dos decimales">
+            {{ percent | percent: '1.2-2' }}
+        </p-card>
+    </div>
+</div>

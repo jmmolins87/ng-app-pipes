@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class NumberPageComponent {
 
+  public title: string = 'Pipes Numéricos';
+  public mainText: string = 'Pipes incluidas en Angular - Usualmente en el Common Module';
+  public totalSells: number = 2567789.5567;
+  public percent: number = 0.4856;
+
 }

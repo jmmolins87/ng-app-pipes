@@ -12,6 +12,7 @@ export class OrderComponent {
   public title: string = 'Pipes Personalizados';
   public mainText: string = 'Creados por'; 
   public isUpperCase: boolean = false;
+  public orderBy: keyof Hero | undefined | '' = '';
   public heros: Hero[] = [
     {
       name: 'Superman',
@@ -42,6 +43,10 @@ export class OrderComponent {
 
   changeToggle(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  changeOrderBy( value: keyof Hero | '' ): void {
+    this.orderBy = value;
   }
 
 }
